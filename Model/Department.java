@@ -1,6 +1,11 @@
 package Model;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
+
+import DB.DatabaseConnection;
 
 public class Department {
     private int dept_id;
@@ -44,4 +49,17 @@ public ArrayList<Major> getMajor() {
 public void setMajor(ArrayList<Major> major) {
     this.major = major;
 }
+//_____________________________db connection______________________
+ public void saveToDatabase() {
+        try (Connection connection = DatabaseConnection.getConnection()) {
+            String sql = "INSERT INTO departments (dept_id, title) VALUES (?, ?)";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setInt(1, dept_id);
+                statement.setString(2, title);
+                statement.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

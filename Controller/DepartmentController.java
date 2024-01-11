@@ -4,8 +4,14 @@ import Model.Department;
 import Model.Teacher;
 import Model.Major;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import DB.DatabaseConnection;
 
 public class DepartmentController {
     private ArrayList<Department> departments;
@@ -82,5 +88,25 @@ public void displayDepartmentDetails(Department department) {
         System.out.println("Department not found.");
     }
 }
-
+//_________________________connect to db________________________________________
+public void loadDepartmentsFromDatabase() {
+        departments.clear();
+        try (Connection connection = DatabaseConnection.getConnection()) {
+            String sql = "SELECT * FROM departments";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    while (resultSet.next()) {
+                        int dept_id = resultSet.getInt("dept_id");
+                        String title = resultSet.getString("title");
+                        
+                        Teacher dpt_Head = new Teacher(); 
+                        Department department = new Department(dept_id, title, dpt_Head);
+                        departments.add(department);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
