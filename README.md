@@ -1,0 +1,2 @@
+# OOP Java Exercises for SITD Branch - University Hassan 1st FSTS
+This repository contains a school management program using object-oriented programming (OOP) Java ,this project assigned by Mr. Mehdi Ait Said for the System Information and Digital Transformation (SITD) branch at University Hassan 1st FSTS. The project have been realised by Shaymae Houssam Ouazzani. (still working on it )

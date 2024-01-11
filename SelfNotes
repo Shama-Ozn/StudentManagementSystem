@@ -1,0 +1,38 @@
+//this is just a spot to clear my mind about confusing code lines as I usually do 
+//for a professional this means nothing , for me or another beginner here's where the img get clearer may be 
+//_________________________________________packages________________________________________________
+
+//________why using MVC ? 
+
+/* first what are MVC , MVC a molati is an acronym for Model-View-Controller,
+ an architectural design pattern used to develop interactive applications.
+  It is used to separate the concerns of an application into three distinct layers, 
+  each with a specific role:
+      *Model: The heart of the program >>> contains data and business logic , has nothing to do with Mr View nor Mr Controller..
+      *Controller: Mr controller is the Conductor >>> handles user interactions , asks models for data and send them to the views to display them .
+      *View: .. yes u'r right , I feel u getting it , He's the pixel artist >> who's in charge of displaying Model's data , got nothing to do with logic and stuff ..
+   I think it's the same as what teacher did today 
+_______-_-_-_-_ now why MVC ? ________ Becauuuuuuuuuuuuuuuuuse :
+just by applying this.. , we've mostly done 1st objectif , 'cause By applying MVC  we achieve :
+   -Separation of concerns
+   -Reusability
+   -Testability
+   -Flexibility
+   -Maintainability
+   Awesome isn't it ! that's why we love coding Buds..
+      */
+      
+      //Set what to get !! , always put setters before getters and separate them , if we were doing that we won't spent all that time seeking for that damn getter.. it isn't that necessary but it made things clearer bud..
+   
+
+/*now the code is functioning and there's no errors , but i feel something wrong about it ..
+what I saw the teacher doing today is a bit diffrent .. his way of doing things is clearer more organised , but 
+whenever i try to make it the same way.. I'm afraid to touch anyline honestly 'cause I'm barely catching things 
+
+
+hadshi kaytelef jab lya doukha .. idk how to do what my teacher and collabs diiiid aaaaaaa
+ .. i touch the code it won't function , i ask chat it makes things worst smtimes .. 
+
+done of waiting till my code is perfect to commit this .. I confess it's full of gaps and there's a long way right above to became that good in java ..
+
+*/
